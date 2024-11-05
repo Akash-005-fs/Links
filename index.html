@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Danfo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Notable&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+<div class="main">
+    <div class="back">
+    
+
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+            </div>
+          </div>
+
+
+
+
+
+    </div>
+
+    <div class="front">
+        <div class="pic"><div class="p1"></div></div>
+        <p style="color: aliceblue;"> <i class="fab fa-instagram"></i> akash.pradeep_</p>
+
+        <div class="scrolly">
+            <div class="cards"><div class="logo"><div class="l1"></div></div><a class="write" href="https://Akash-005-fs.github.io/portfolio/">/portfolio</a></div>
+            <div class="cards"><div class="logo"><div class="l2"></div></div><a class="write" href="https://github.com/Akash-005-fs">/GitHub</a></div>
+            <div class="cards"><div class="logo"><div class="l3"></div></div><a class="write" href="https://www.behance.net/akashpradeep">/Behance</a></div>
+            <div class="cards"><div class="logo"><div class="l4"></div></div><a class="write" href="https://devfolio.co/@metaphor007">/Devfolio</a></div>
+            <div class="cards"><div class="logo"><div class="l5"></div></div><a class="write" href="https://www.linkedin.com/in/akash-pradeep1705/">/LinkedIn</a></div>
+        </div>
+    </div>
+</div>
+
+<style>
+html, body {
+  font-family: 'Dongle', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+:root {
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+
+  svg {
+    display: none;
+  }
+
+
+  .gradients-container {
+    filter: url(#goo) blur(40px) ;
+    width: 100%;
+    height: 100%;
+  }
+
+  .g1 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+
+    opacity: 1;
+  }
+
+  .g2 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+
+    opacity: 1;
+  }
+
+  .g3 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+
+    opacity: 1;
+  }
+
+  .g4 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+
+    opacity: 0.7;
+  }
+
+  .g5 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+
+    opacity: 1;
+  }
+
+  .interactive {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+
+    opacity: 0.7;
+  }
+}
+
+.main {
+    height: auto;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.back {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.front {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.p1 {
+    height: 95%;
+    width: 95%;
+    border-radius: 100%;
+    background-image: url(profilepic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.scrolly {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards {
+    height: 60px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+}
+
+.cards::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.cards:hover::before {
+    opacity: 1;
+    animation: flash 1s linear infinite;
+}
+
+@keyframes flash {
+    0% { transform: translate(-100%, -100%) rotate(45deg); }
+    100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+.logo {
+    height: 90%;
+    width: 60px;
+    border-radius: 5px;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.423);
+}
+
+
+
+.l1{
+background-image: url(portfolio.png);
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+.l2{
+background-image: url(github.png);
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 100%;
+
+}
+
+.l3{
+background-image: url(behance.png);
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+
+.l4{
+background-image: url(devfolio.png);
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+
+.l5{
+background-image: url(linkedin.png);
+background-position: center;
+background-size: cover;
+height: 100%;
+width: 100%;
+}
+
+
+
+
+
+.write {
+    margin-left: 2%;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width:700px) {
+    .scrolly { margin-top: 10%; }
+}
+
+@media only screen and (min-width:901px) {
+    .pic { margin-top: 2%; }
+    .scrolly { margin-top: 5%; height: 60%; }
+}
+</style>
+</body>
+</html>
